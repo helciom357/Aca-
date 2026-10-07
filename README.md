@@ -1,24 +1,21 @@
-# ACA Resort Pet Center — Landing page
+# ACA Resort Pet Center — site (versão imersiva)
 
-Site estático (HTML + CSS + JS puro, sem build).
+Site estático (HTML + CSS + JS, sem build).
 
 ## Estrutura
 - `index.html` — página única
-- `assets/css/` — v3.css, v4.css, v5.css (carregados nessa ordem)
-- `assets/js/` — v3.js, v5.js
-- `assets/fonts/` — Bricolage Grotesque e DM Sans (woff2)
-- `assets/brand/` — logo
-- `assets/images/` — fotos, ilustrações e galeria (webp)
-- `assets/videos/` — vídeos (mp4)
+- `assets/css/site.css` — estilos
+- `assets/js/site.js` — interações e transições
+- `assets/js/vendor/` — GSAP 3.12.5 + ScrollTrigger (hospedados localmente)
+- `assets/fonts/` — Fraunces, Schibsted Grotesk e Martian Mono (licença OFL)
+- `assets/brand/` — logo (versão original e versão clara para fundos escuros)
+- `assets/images/`, `assets/videos/` — fotos e vídeos da ACA
 
-## Rodar localmente
-```
-npx serve .
-```
-ou `python -m http.server` na pasta e abrir http://localhost:8000
+A rolagem suave (Lenis) vem do jsDelivr; se não carregar, o site funciona com a rolagem normal.
+Quem usa "reduzir movimento" no sistema recebe a versão sem animações.
 
-## Publicar
-Basta subir o conteúdo desta pasta em qualquer hospedagem estática (Hostinger, GitHub Pages, etc.).
-Todos os caminhos são relativos, então funciona na raiz do domínio ou em subpasta.
+## Publicar na Hostinger
+Envie o conteúdo desta pasta para `public_html` (ou para uma subpasta). Todos os caminhos são relativos.
 
-Observação: o vídeo `assets/videos/aca-tour-completo.mp4` tem ~11 MB (abaixo do limite de 100 MB do GitHub).
+## Testar localmente
+`python -m http.server` nesta pasta e abra http://localhost:8000
